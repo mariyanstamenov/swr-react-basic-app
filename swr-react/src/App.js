@@ -4,11 +4,11 @@ import JokeComponent from './Components/JokeComponent';
 
 const App = () => {
   const jokeFetcher = () => {
-    mutate(newJokePath);
+    mutate(randomJokePath);
   };
 
-  const newJokePath = 'jokes/random';
-  const { data, error } = useSWR(newJokePath);
+  const randomJokePath = 'jokes/random';
+  const { data, error } = useSWR(randomJokePath);
   if (error) return <div>Something went wrong..</div>;
 
   return (
